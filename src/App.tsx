@@ -20,6 +20,17 @@ function App() {
         <a href="https://github.com/zzzappy" target="_blank" rel="noopener" className="social-btn github-btn">
           <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" className="github-mark-white" /> GitHub
         </a>
+        <a
+          href="#"
+          className="social-btn contact-btn"
+          onClick={e => {
+            e.preventDefault();
+            window.location.href = 'mailto:' + ['spzappa.personal', 'gmail.com'].join('@');
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Zm2.5-.5a.5.5 0 0 0-.5.5v.217l8 5.333 8-5.333V6.5a.5.5 0 0 0-.5-.5h-15Zm15 13a.5.5 0 0 0 .5-.5v-8.217l-7.5 5-7.5-5V17.5a.5.5 0 0 0 .5.5h15Z"/></svg>
+          Contact
+        </a>
       </div>
       <footer className="footer-badges">
         Made with
