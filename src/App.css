@@ -1,4 +1,15 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 #root {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -54,14 +65,15 @@
   }
 }
 
-.ReactTyped-tech {
+.tech-font {
   font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
   font-size: 1.3em;
   letter-spacing: 0.5px;
 }
 
 .footer-badges {
-  margin-top: 2em;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
   display: flex;
   gap: 8px;
   justify-content: center;
@@ -82,4 +94,41 @@
 }
 .footer-badges a:hover img[alt="TypeScript"] {
   filter: drop-shadow(0 0 2em #3178c6aa);
+}
+.footer-badges a:hover img[alt="GitHub Pages"] {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 2px solid #444;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: border-color 1.4s, box-shadow 1.4s;
+}
+.social-btn:hover {
+  background: #23272f;
+  border-color: #fff;
+  box-shadow: 0 0 8px #ffffffaa;
+  color: #fff;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+.social-btn img {
+  height: 1.5em;
+}
+.social-btn.github-btn img {
+  border-radius: 4px;
+  filter: invert(1);
 }
