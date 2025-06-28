@@ -62,6 +62,7 @@ body {
 .typed-subtitle {
   min-height: 5em; /* makes for better spacing on word wrap */
   font-size: 1.8em;
+  width: 90vw;
 }
 
 .footer-badges {
