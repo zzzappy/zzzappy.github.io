@@ -1,32 +1,43 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
-# Deploy on push to main branch or when a pull request is merged into main
 on:
   push:
     branches: [main]
   pull_request:
-    types: [closed]
     branches: [main]
 
 jobs:
-  build-and-deploy:
+  build:
+    # Runs on all pushes and pull requests to main (tests build, but does not deploy)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+
+  deploy:
+    # Only runs on push to main or when a PR is merged (deploys to GitHub Pages)
+    needs: build
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
       - name: Install dependencies
         run: npm ci
-
       - name: Build
         run: npm run build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
