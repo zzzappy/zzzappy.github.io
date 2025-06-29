@@ -47,7 +47,7 @@ function App() {
         className="tech-font typed-subtitle"
       />
       <footer className="footer-badges">
-        Made by Sam Zappa with
+        Site by Sam Zappa. Made with
         <a href="https://github.com/vitejs/vite" target="_blank" rel="noopener">
           <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
         </a>
