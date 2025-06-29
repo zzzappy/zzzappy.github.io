@@ -7,7 +7,10 @@ function App() {
     <div className="main-content">
       {/* animating svg: https://maxwellito.github.io/vivus-instant/ */}
       <img
-        src="/name_animated_no_loop.svg"
+        src={
+          // Prevents caching so svg animates on each load
+          `/name_animated_no_loop.svg?${Date.now()}`
+        }
         alt="Sam Zappa"
         className="animated-name-img slide-fade-in"
       />

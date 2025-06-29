@@ -41,6 +41,7 @@ body {
 .animated-name-img {
   width: 80vw;
   min-width: 200px;
+  max-width: 1000px;
   height: auto;
   display: block;
   box-sizing: border-box;
@@ -77,13 +78,13 @@ body {
   gap: 8px;
   background: rgba(36,36,36,0.97);
   border-radius: 12px 12px 0 0;
-  padding: 0.7em 2vw 0.7em 2vw; /* More horizontal padding for edge safety */
+  padding: 0.7em 2vw 0.7em 2vw;
   margin: 0;
   font-size: 1em;
   z-index: 100;
   box-shadow: 0 -2px 16px #0004;
-  box-sizing: border-box; /* Ensures padding is included in width */
-  text-align: center;      /* Helps with inline content centering */
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .footer-badges img {
@@ -112,7 +113,7 @@ body {
   justify-content: center;
   gap: 1.5rem;
   margin: 2rem 0 1.5rem 0;
-  padding: 0 2vw; /* Add horizontal padding to prevent edge clipping */
+  padding: 0 2vw;
   box-sizing: border-box;
 }
 .social-btn {
@@ -155,7 +156,7 @@ body {
   .footer-badges {
     flex-wrap: wrap;
     gap: 4px;
-    justify-content: center; /* Ensure center even when wrapped */
+    justify-content: center;
     padding: 0.7em 2vw 0.7em 2vw;
   }
   .social-links {
