@@ -1,6 +1,7 @@
 import './App.css'
 import { ReactTyped } from 'react-typed'
 import MailIcon from '@mui/icons-material/Mail';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           Computer Science student at the University of Washington Paul G. Allen School of Computer Science & Engineering. Motivated and passionate about software engineering, problem solving, and building impactful technology.
         </div>
         <div className="purpose-objective">
-          Seeking internship or entry-level software engineering opportunities where I can apply my strong analytical and collaborative skills. Looking for a role where I can contribute to an organization's goals while gaining valuable life and work experience.
+          Seeking internship or entry-level software engineering (or related) opportunities where I can apply my strong analytical and collaborative skills. Looking for a role where I can contribute to an organization's goals while gaining valuable life and work experience.
         </div>
       </div>
       <div className="social-links tech-font">
@@ -36,6 +37,16 @@ function App() {
         >
           <MailIcon className="email-icon" />
           Contact
+        </a>
+        <a
+          href="/Resume_SamZappa.pdf"
+          download
+          className="social-btn resume-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          <PictureAsPdfIcon className="email-icon" />
+          Resume
         </a>
       </div>
       <ReactTyped
