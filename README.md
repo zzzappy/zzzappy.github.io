@@ -1,6 +1,8 @@
 # Sam Zappa – Portfolio Website
 
-**Welcome to my personal website/portfolio!**
+Welcome to my personal website/portfolio!
+
+### Access the site here: [zzzappy.github.io](https://zzzappy.github.io)
 
 ![Screenshot of the site](https://github.com/user-attachments/assets/d7bf927a-cd79-446d-b87b-bdf7e8ee4e27)
 
